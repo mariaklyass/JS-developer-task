@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Form</title>
+  </head>
+  <body>
+    <form id="yourForm" onsubmit="saveToPipedrive(event)">
+      <!-- Client Details -->
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" />
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" />
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" />
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+
+      <!-- Job Details -->
+      <!-- Add other fields as needed -->
+
+      <!-- Service Location -->
+      <!-- Add other fields as needed -->
+
+      <!-- Scheduled Date -->
+      <!-- Add other fields as needed -->
+
+      <button type="submit">Save to Pipedrive</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

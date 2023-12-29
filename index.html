@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Create Job Form</title>
+  </head>
+  <body>
+    <button type="button" id="openFormButton" class="open-button">
+      Create job
+    </button>
+    <div id="overlay" class="overlay"></div>
+    <div id="jobFormContainer" class="job-form-container">
+      <div class="form-header">
+        <button id="closeFormButton" class="close-button">✕</button>
+        <h3>NEW Create a job</h3>
+      </div>
+
+      <form id="jobForm">
+        <!-- Client Details Section -->
+        <div class="job-form">
+          <fieldset>
+            <legend>Client Details</legend>
+            <div class="two-cols">
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                placeholder="First Name"
+              />
+
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                placeholder="Last Name"
+              />
+            </div>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="Phone"
+            />
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Email"
+            />
+          </fieldset>
+
+          <!-- Job Type Section -->
+          <fieldset>
+            <legend>Job Type</legend>
+            <select
+              id="jobType"
+              name="jobType"
+              required
+              aria-placeholder="Job Type"
+            >
+              <option value="type1">Recall Job</option>
+              <option value="type2">Type 2</option>
+              <option value="type2">Type 3</option>
+              <option value="type2">Type 4</option>
+            </select>
+
+            <select id="jobSource" name="jobSource" required>
+              <option value="source1">GL Pinellas</option>
+              <option value="source2">Source 2</option>
+              <option value="source2">Source 3</option>
+              <option value="source2">Source 4</option>
+            </select>
+
+            <textarea
+              placeholder="Job Description"
+              id="jobDescription"
+              name="jobDescription"
+              rows="4"
+            ></textarea>
+          </fieldset>
+
+          <!-- Service Location Section -->
+          <fieldset>
+            <legend>Service Location</legend>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Address"
+            />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="City"
+            />
+            <input
+              type="text"
+              id="state"
+              name="state"
+              required
+              placeholder="State"
+            />
+            <div class="two-cols">
+              <input
+                type="text"
+                id="zipCode"
+                name="zipCode"
+                required
+                placeholder="Zip Code"
+              />
+              <select id="locationType" name="locationType" required>
+                <option value="Tampa">Tampa</option>
+                <option value="Tampa">Location 2</option>
+                <option value="Tampa">Location 3</option>
+                <option value="Tampa">Location 4</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- Scheduled Section -->
+          <fieldset>
+            <legend>Scheduled</legend>
+            <input type="date" id="date" name="date" required />
+            <div class="two-cols">
+              <input type="time" id="startTime" name="startTime" required />
+              <input type="time" id="endTime" name="endTime" required />
+            </div>
+
+            <select id="technician" name="technician" required>
+              <option value="tech1">Timur Yussupov</option>
+              <option value="tech2">Technician 2</option>
+              <option value="tech2">Technician 3</option>
+              <option value="tech2">Technician 4</option>
+            </select>
+          </fieldset>
+        </div>
+        <div class="btns">
+          <button id="createJobButton" type="submit">Create job</button>
+          <button type="button">Save info</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
